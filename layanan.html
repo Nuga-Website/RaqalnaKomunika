@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Layanan - Raqalna Komunika</title>
+  <style>
+    :root {
+      --bg: #f4f4f4;
+      --text: #333;
+      --header: #0b132b;
+      --card: #fff;
+    }
+    body.dark {
+      --bg: #121212;
+      --text: #eee;
+      --header: #1f1f1f;
+      --card: #1e1e1e;
+    }
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: all 0.3s ease;
+    }
+    header {
+      background: var(--header);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header img {
+      height: 50px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+      background: var(--card);
+      border-radius: 10px;
+      margin-top: 2rem;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    .lang-switch, .dark-mode {
+      cursor: pointer;
+      margin-left: 1rem;
+      padding: 5px 10px;
+      border-radius: 5px;
+      background: white;
+      color: black;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <a href="index.html"><img src="logo.png" alt="Logo Raqalna" /></a>
+    </div>
+    <nav>
+      <a href="index.html" data-en="Home">Beranda</a>
+      <a href="tentang.html" data-en="About">Tentang</a>
+      <a href="layanan.html" data-en="Services">Layanan</a>
+      <a href="galeri.html" data-en="Gallery">Galeri</a>
+      <a href="kontak.html" data-en="Contact">Kontak</a>
+      <span class="lang-switch">EN</span>
+      <span class="dark-mode">🌓</span>
+    </nav>
+  </header>
+  <div class="container">
+    <h1 data-en="Our Services">Layanan Kami</h1>
+    <ul>
+      <li data-en="Event Planning & Management">Perencanaan & Manajemen Acara</li>
+      <li data-en="Corporate Events">Acara Perusahaan</li>
+      <li data-en="Wedding Organizer">Penyelenggaraan Pernikahan</li>
+      <li data-en="Concert & Festival Events">Acara Konser & Festival</li>
+      <li data-en="Virtual Events">Acara Virtual</li>
+    </ul>
+  </div>
+
+  <script>
+    const langSwitch = document.querySelector('.lang-switch');
+    const darkToggle = document.querySelector('.dark-mode');
+    const elements = document.querySelectorAll('[data-en]');
+    let lang = 'id';
+    langSwitch.onclick = () => {
+      lang = lang === 'id' ? 'en' : 'id';
+      elements.forEach(el => {
+        const idText = el.textContent;
+        const enText = el.getAttribute('data-en');
+        if (lang === 'en') {
+          el.textContent = enText;
+        } else {
+          el.textContent = idText;
+        }
+      });
+      langSwitch.textContent = lang === 'id' ? 'EN' : 'ID';
+    };
+    darkToggle.onclick = () => {
+      document.body.classList.toggle('dark');
+    };
+  </script>
+</body>
+</html>
