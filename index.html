@@ -2,9 +2,48 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Raqalna Komunika - Event Organizer Profesional</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Raqalna Komunika</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .hero {
+      background: url('hero.jpg') center/cover no-repeat;
+      padding: 5rem 2rem;
+      color: white;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .section {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .feature {
+      flex: 1 1 250px;
+      background: var(--card);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+    .cta {
+      background: var(--primary);
+      color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      margin-top: 3rem;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -21,25 +60,39 @@
   </header>
 
   <section class="hero">
-    <h1>Raqalna Komunika</h1>
-    <p>Mengelola dan menyukseskan acara Anda dengan profesional.</p>
-    <a class="cta" href="kontak.html">Hubungi Kami</a>
+    <h1>Wujudkan Acara Impian Anda</h1>
+    <p>Kami adalah partner terbaik Anda dalam menyelenggarakan acara profesional, meriah, dan berkesan.</p>
   </section>
 
-  <section class="highlights">
-    <div class="highlight">
-      <h2>Event Wedding</h2>
-      <p>Kami bantu Anda mewujudkan pernikahan impian yang tak terlupakan.</p>
+  <main class="section">
+    <h2>Mengapa Memilih Raqalna Komunika?</h2>
+    <p>Kami hadir untuk memastikan setiap acara Anda berjalan sempurna. Berpengalaman dalam menangani berbagai jenis event, tim kami bekerja dengan komitmen penuh untuk menciptakan momen tak terlupakan bagi klien kami.</p>
+
+    <div class="features">
+      <div class="feature">
+        <h3>✅ Pengalaman Luas</h3>
+        <p>Dari pernikahan mewah hingga seminar profesional, kami telah menangani berbagai jenis acara dengan hasil memuaskan.</p>
+      </div>
+      <div class="feature">
+        <h3>🎧 Tim Profesional</h3>
+        <p>Didukung oleh kru berpengalaman di bidang produksi, dekorasi, dan operasional event.</p>
+      </div>
+      <div class="feature">
+        <h3>📍 Fleksibel & Adaptif</h3>
+        <p>Kami siap menyesuaikan dengan kebutuhan, lokasi, dan tema acara Anda.</p>
+      </div>
+      <div class="feature">
+        <h3>💡 Ide Kreatif</h3>
+        <p>Setiap event kami rancang unik dan inovatif, sesuai karakter dan tujuan klien.</p>
+      </div>
     </div>
-    <div class="highlight">
-      <h2>Konser & Musik</h2>
-      <p>Dari panggung hingga teknis, kami urus semuanya untuk konser Anda.</p>
+
+    <div class="cta">
+      <h2>Siap Membuat Acara Tak Terlupakan?</h2>
+      <p>Hubungi kami sekarang untuk konsultasi gratis dan penawaran terbaik.</p>
+      <a href="kontak.html" class="button">Hubungi Kami</a>
     </div>
-    <div class="highlight">
-      <h2>Seminar & Korporat</h2>
-      <p>Meeting, seminar, dan wisuda — berjalan lancar dengan tim kami.</p>
-    </div>
-  </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Raqalna Komunika. Semua hak dilindungi.</p>

@@ -3,24 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Galeri - Raqalna Komunika</title>
+  <title>Galeri Acara - Raqalna Komunika</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    .galeri-grid {
+    .section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 3rem 1rem;
+    }
+    .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      padding: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
     }
-    .galeri-grid img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
+    .gallery-item {
+      background: var(--card);
       border-radius: 10px;
-      transition: transform 0.3s;
+      overflow: hidden;
+      box-shadow: var(--shadow);
     }
-    .galeri-grid img:hover {
-      transform: scale(1.05);
+    .gallery-item img {
+      width: 100%;
+      display: block;
+    }
+    .caption {
+      padding: 0.8rem 1rem;
+      font-size: 0.9rem;
+      color: var(--text);
     }
   </style>
 </head>
@@ -38,16 +48,37 @@
     </nav>
   </header>
 
-  <main class="content">
-    <h1>Galeri Dokumentasi</h1>
-    <p>Beberapa momen terbaik dari acara yang telah kami tangani:</p>
-    <div class="galeri-grid">
-      <img src="foto1.jpg" alt="Event 1" />
-      <img src="foto2.jpg" alt="Event 2" />
-      <img src="foto3.jpg" alt="Event 3" />
-      <img src="foto4.jpg" alt="Event 4" />
-      <img src="foto5.jpg" alt="Event 5" />
-      <img src="foto6.jpg" alt="Event 6" />
+  <main class="section">
+    <h1>Galeri Acara</h1>
+    <p>
+      Berikut adalah dokumentasi beberapa acara yang telah kami tangani. Kami selalu mengutamakan estetika, kerapihan, dan kepuasan klien dalam setiap proyek yang kami jalankan.
+    </p>
+
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="img/foto1.jpg" alt="Acara Wedding">
+        <div class="caption">Pernikahan Intim di Outdoor Garden</div>
+      </div>
+      <div class="gallery-item">
+        <img src="img/foto2.jpg" alt="Seminar Pendidikan">
+        <div class="caption">Seminar Edukasi Mahasiswa</div>
+      </div>
+      <div class="gallery-item">
+        <img src="img/foto3.jpg" alt="Konser Musik">
+        <div class="caption">Mini Concert: Local Artist Night</div>
+      </div>
+      <div class="gallery-item">
+        <img src="img/foto4.jpg" alt="Wisuda">
+        <div class="caption">Wisuda Universitas Swasta</div>
+      </div>
+      <div class="gallery-item">
+        <img src="img/foto5.jpg" alt="Event Karyawan">
+        <div class="caption">Family Gathering Perusahaan</div>
+      </div>
+      <div class="gallery-item">
+        <img src="img/foto6.jpg" alt="Dekorasi Acara">
+        <div class="caption">Dekorasi Full Event Indoor</div>
+      </div>
     </div>
   </main>
 
